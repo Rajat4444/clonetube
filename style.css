@@ -115,3 +115,57 @@ body {
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  #search-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  #search-button img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .result-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .thumbnail-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  .result-info {
+    padding: 10px;
+  }
+
+  .result-info h4 {
+    font-size: 16px;
+  }
+
+  .result-info p {
+    font-size: 13px;
+  }
+
+  .duration-badge {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+}
+
