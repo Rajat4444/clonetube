@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    iframe {
+      width: 80%;
+      height: 80%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="player" allowfullscreen></iframe>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const videoId = params.get("videoId");
+
+    if (videoId) {
+      const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      document.getElementById("player").src = embedUrl;
+    } else {
+      document.body.innerHTML = "<h2 style='color:white;'>No video selected.</h2>";
+    }
+  </script>
+</body>
+</html>
